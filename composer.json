@@ -1,0 +1,26 @@
+{
+    "name": "ernestdefoe/roleplay",
+    "description": "Role-play for Flarum: play a character, post in-character, and run a card-based tactical game inside your discussions.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^2.0"
+    },
+    "authors": [
+        { "name": "ernestdefoe", "email": "ernestdefoe@gmail.com" }
+    ],
+    "autoload": {
+        "psr-4": { "Ernestdefoe\\Roleplay\\": "src/" }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Role-Play",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-dragon",
+                "backgroundColor": "#4c1d95",
+                "color": "#fff"
+            }
+        }
+    }
+}
