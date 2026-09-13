@@ -1,0 +1,181 @@
+.RpPage { padding: 24px 0 60px; }
+.RpPage-title { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-weight: 800; }
+.RpPage-title .icon { color: #7c3aed; }
+.RpPage-sub { color: var(--muted-color); margin-bottom: 20px; }
+.RpPage-empty { color: var(--muted-color); padding: 24px; text-align: center; border: 1px dashed var(--control-bg); border-radius: 12px; }
+
+.RpCard {
+  background: var(--body-bg);
+  border: 1px solid var(--control-bg, rgba(0, 0, 0, 0.08));
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.RpForm h3 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+.RpForm .FormControl { margin-bottom: 10px; }
+.RpForm-row { display: flex; gap: 16px; align-items: center; margin-bottom: 10px; }
+.RpForm-color { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.RpForm-color input[type='color'] { width: 40px; height: 32px; padding: 0; border: none; background: none; cursor: pointer; }
+.RpForm-actions { display: flex; gap: 8px; }
+
+.RpCharacter { display: flex; align-items: center; gap: 14px; }
+.RpCharacter-badge {
+  flex: 0 0 auto; width: 48px; height: 48px; border-radius: 12px;
+  display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 20px; overflow: hidden;
+}
+.RpCharacter-badge img { width: 100%; height: 100%; object-fit: cover; }
+.RpCharacter-main { flex: 1; min-width: 0; }
+.RpCharacter-name { font-weight: 700; font-size: 16px; }
+.RpCharacter-meta { color: var(--muted-color); font-size: 13px; }
+.RpCharacter-bio { color: var(--muted-color); font-size: 13px; margin-top: 4px; }
+.RpCharacter-actions { display: flex; gap: 4px; }
+
+/* ── In-character posts ─────────────────────────────────────────── */
+.RpPostAvatar {
+  display: grid !important; place-items: center; color: #fff; font-weight: 800; overflow: hidden;
+}
+.RpPostAvatar img { width: 100%; height: 100%; object-fit: cover; }
+.RpPostUser-mask { color: #7c3aed; font-size: 0.85em; opacity: 0.85; }
+.RpPostUser-name { font-weight: 700; }
+.RpPostUser-by { font-size: 12px; color: var(--muted-color); margin-top: 1px; }
+.RpComposerPicker { display: inline-flex; align-items: center; gap: 6px; }
+.RpComposerPicker .icon { color: #7c3aed; }
+.RpComposerPicker .Select { display: inline-block; }
+.RpComposerPicker .Select-input { height: 32px; padding: 0 24px 0 8px; font-size: 13px; }
+.RpPostUser { display: inline-flex; align-items: baseline; gap: 6px; }
+.RpPostUser-by { font-weight: 400; font-size: 12px; color: var(--muted-color); }
+
+/* ── Deck / card builder ────────────────────────────────────────── */
+.RpForm-grow { flex: 1; margin-bottom: 0 !important; }
+.RpForm-field { display: flex; flex-direction: column; gap: 4px; flex: 1; font-weight: 600; font-size: 13px; }
+.RpForm-field .FormControl { margin-bottom: 0; }
+.RpForm-check { display: flex; align-items: center; gap: 8px; margin: 4px 0 12px; font-weight: 600; }
+.RpDeck-form .Select { min-width: 130px; }
+.RpDeck-heading { margin: 26px 0 12px; font-size: 15px; font-weight: 800; color: var(--muted-color); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.RpDeck-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.RpTile {
+  --rp-accent: #7c3aed;
+  position: relative;
+  background: var(--body-bg);
+  border: 1px solid var(--control-bg, rgba(0, 0, 0, 0.08));
+  border-top: 4px solid var(--rp-accent);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex; flex-direction: column; gap: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.RpTile:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); }
+.RpTile[data-type='ability'] { --rp-accent: #7c3aed; }
+.RpTile[data-type='item'] { --rp-accent: #0d9488; }
+.RpTile[data-type='spell'] { --rp-accent: #2563eb; }
+.RpTile[data-type='enemy'] { --rp-accent: #dc2626; }
+
+.RpTile-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.RpTile-icon { font-size: 30px; color: var(--rp-accent); }
+.RpTile-cost {
+  min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px;
+  background: var(--rp-accent); color: #fff; font-weight: 800; font-size: 12px;
+  display: inline-grid; place-items: center;
+}
+.RpTile-name { font-weight: 800; font-size: 15px; line-height: 1.2; }
+.RpTile-type {
+  align-self: flex-start; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--rp-accent); background: color-mix(in srgb, var(--rp-accent) 14%, transparent);
+  padding: 1px 8px; border-radius: 999px;
+}
+.RpTile-desc { font-size: 12px; color: var(--muted-color); line-height: 1.35; }
+.RpTile-stats { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: auto; padding-top: 6px; }
+.RpTile-stat { font-size: 12px; font-weight: 600; }
+.RpTile-stat .icon { color: var(--muted-color); margin-right: 2px; }
+.RpTile-actions { position: absolute; top: 8px; right: 8px; display: none; gap: 2px; }
+.RpTile:hover .RpTile-actions { display: flex; }
+.RpTile-actions .Button { background: var(--body-bg); }
+.RpTile-shared { font-size: 11px; color: var(--muted-color); font-style: italic; }
+
+/* ── Combat tracker (discussion sidebar) ────────────────────────── */
+.RpTracker {
+  background: var(--body-bg);
+  border: 1px solid var(--control-bg, rgba(0, 0, 0, 0.08));
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+.RpTracker-empty { padding: 10px; }
+.RpTracker-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.RpTracker-title { font-weight: 800; display: inline-flex; align-items: center; gap: 6px; }
+.RpTracker-title .icon { color: #7c3aed; }
+.RpTracker-round { font-size: 11px; font-weight: 800; color: #16a34a; background: rgba(22, 163, 74, 0.12); padding: 2px 8px; border-radius: 999px; }
+.RpTracker-badge { font-size: 11px; font-weight: 700; color: var(--muted-color); text-transform: uppercase; }
+
+.RpTracker-list { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.RpCombatant { display: flex; align-items: center; gap: 7px; padding: 6px; border-radius: 9px; transition: background 0.12s; }
+.RpCombatant.is-active { background: rgba(124, 58, 237, 0.1); box-shadow: inset 0 0 0 1px rgba(124, 58, 237, 0.4); }
+.RpCombatant.is-down { opacity: 0.5; }
+.RpCombatant-turn { width: 12px; color: #7c3aed; }
+.RpCombatant-dot { flex: 0 0 auto; width: 10px; height: 10px; border-radius: 50%; }
+.RpCombatant-main { flex: 1; min-width: 0; }
+.RpCombatant-top { display: flex; justify-content: space-between; gap: 6px; }
+.RpCombatant-name { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.RpCombatant-init { flex: 0 0 auto; font-size: 11px; font-weight: 700; color: var(--muted-color); }
+.RpCombatant-hpbar { height: 6px; border-radius: 3px; background: var(--control-bg, rgba(0, 0, 0, 0.1)); overflow: hidden; margin: 3px 0 1px; }
+.RpCombatant-hpfill { display: block; height: 100%; transition: width 0.3s ease; }
+.RpCombatant-hptext { font-size: 11px; color: var(--muted-color); }
+.RpCombatant-rm { flex: 0 0 auto; }
+
+.RpTracker-setup, .RpTracker-play, .RpTracker-gm { display: flex; flex-direction: column; gap: 6px; padding-top: 8px; border-top: 1px solid var(--control-bg, rgba(0, 0, 0, 0.08)); }
+.RpTracker-addrow { display: flex; gap: 6px; }
+.RpTracker-addrow .FormControl { min-width: 0; }
+.RpTracker .FormControl { height: 34px; font-size: 13px; }
+.RpTracker textarea.FormControl { height: auto; }
+.RpTracker-play { background: rgba(124, 58, 237, 0.05); margin: 0 -12px; padding: 10px 12px; }
+.RpTracker-playwho { font-weight: 700; color: #7c3aed; }
+.RpTracker-end { color: #dc2626 !important; }
+
+.RpTracker-log { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--control-bg, rgba(0, 0, 0, 0.08)); display: flex; flex-direction: column; gap: 5px; }
+.RpLog { display: flex; align-items: baseline; gap: 6px; font-size: 12px; line-height: 1.3; }
+.RpLog .icon { color: var(--muted-color); }
+.RpLog.is-crit .icon { color: #f59e0b; }
+.RpLog-dmg { color: #dc2626; font-weight: 800; }
+.RpLog-miss { color: var(--muted-color); font-style: italic; }
+.RpLog-crit { color: #f59e0b; font-weight: 800; }
+
+.RpCombatant-av { flex: 0 0 auto; width: 22px; height: 22px; border-radius: 50%; object-fit: cover; border: 2px solid; }
+
+.RpTracker-join { display: flex; flex-direction: column; gap: 6px; padding-top: 8px; border-top: 1px solid var(--control-bg, rgba(0, 0, 0, 0.08)); }
+.RpTracker-joinbtn { color: #2563eb !important; font-weight: 700; }
+
+.RpTracker-outcome {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin: 4px 0 10px; padding: 10px; border-radius: 10px;
+  font-weight: 800; font-size: 15px; letter-spacing: 0.02em;
+  animation: rp-pop 0.3s ease;
+}
+.RpTracker-outcome.is-victory { background: rgba(22, 163, 74, 0.14); color: #16a34a; }
+.RpTracker-outcome.is-defeat { background: rgba(220, 38, 38, 0.12); color: #dc2626; }
+@keyframes rp-pop { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* Live Font Awesome icon preview in the card builder */
+.RpForm-iconrow { display: flex; align-items: center; gap: 8px; }
+.RpForm-iconrow .FormControl { margin-bottom: 0; }
+.RpForm-iconpreview {
+  flex: 0 0 auto; width: 38px; height: 38px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--control-bg, rgba(0, 0, 0, 0.06)); font-size: 18px;
+}
+
+/* Local vs shared scope badge on a card */
+.RpTile-scope {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+  padding: 2px 7px; border-radius: 999px; white-space: nowrap;
+}
+.RpTile-scope .icon { font-size: 9px; }
+.RpTile-scope[data-scope='shared'] { background: rgba(37, 99, 235, 0.14); color: #2563eb; }
+.RpTile-scope[data-scope='private'] { background: rgba(0, 0, 0, 0.07); color: var(--muted-color); }
