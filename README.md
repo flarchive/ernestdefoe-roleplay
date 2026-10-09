@@ -2,13 +2,19 @@
 
 > **Read-only archive of released versions of ernestdefoe/roleplay.** Not for installation: use [Packagist](https://packagist.org/packages/ernestdefoe/roleplay) or the [upstream repository](https://github.com/ernestdefoe/roleplay).
 
-**0** versions archived · Latest: [`v1.1.5`](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.5) · License: `MIT` · Flarum: `^2.0`
+**7** versions archived · Latest: [`v1.1.5`](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.5) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `v1.0.0` | 2026-06-26 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.0.0) |
+| `v1.0.1` | 2026-06-26 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.0.1) |
+| `v1.1.1` | 2026-06-27 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.1) |
+| `v1.1.2` | 2026-09-13 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.2) |
+| `v1.1.3` | 2026-10-05 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.3) |
+| `v1.1.4` | 2026-10-05 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.4) |
+| `v1.1.5` | 2026-10-08 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-roleplay/tree/archive/v1.1.5) |
 
 Catalog entry: [packages/ernestdefoe-roleplay.json](https://github.com/flarchive/archive-index/blob/main/packages/ernestdefoe-roleplay.json)
 
